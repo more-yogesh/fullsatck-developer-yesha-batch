@@ -1,8 +1,14 @@
 <?php
+
+$connection = new mysqli('localhost', 'root', '', 'ecom');
+
 if (isset($_POST['btnSubmit'])) {
     // echo "clicked";
-    echo $name = $_POST['p_name'];
-    echo $price = $_POST['price'];
+    $name = $_POST['p_name'];
+    $price = $_POST['price'];
+    $query = "INSERT INTO `products` (`name`, `price`) VALUES ('$name',$price)";
+    $connection->query($query);
+    echo "Record inserted sucessfully!!!";
 }
 
 ?>
