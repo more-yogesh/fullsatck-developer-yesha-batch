@@ -31,7 +31,8 @@ if (isset($_POST['btnAdd'])) {
                 </tr>
                 <tr>
                     <td>Price</td>
-                    <td><input type="number" name="price"></td>
+                    <td><input type="number" name="price">
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input type="submit" name="btnAdd" value="ADD"></td>
