@@ -1,7 +1,5 @@
 <?php
-
-$connection = new mysqli('localhost', 'root', '', 'ecom');
-
+include('db.php');
 if (isset($_POST['btnAdd'])) {
     $connection->query("INSERT INTO products (name, price) VALUES ('$_POST[p_name]', '$_POST[price]')");
 }

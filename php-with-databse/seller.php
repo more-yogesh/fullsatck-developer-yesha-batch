@@ -47,12 +47,16 @@
             <tr>
                 <td>Address</td>
                 <td>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="address" id="" cols="30" rows="10"></textarea>
                 </td>
             </tr>
             <tr>
                 <td>Logo</td>
                 <td><input type="file" name="profile_photo" accept="image/*" id=""></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id=""></td>
             </tr>
             <tr>
                 <td><input type="submit" value="ADD"></td>
