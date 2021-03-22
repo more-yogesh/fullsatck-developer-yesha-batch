@@ -49,7 +49,10 @@ if (isset($_GET['delete_id'])) {
                 <td><?php echo $sel->address; ?></td>
                 <td><?php echo $sel->categories; ?></td>
                 <td><?php echo $sel->state; ?></td>
-                <td><a href="show-sellers.php?delete_id=<?php echo $sel->id; ?>">DELETE</a></td>
+                <td>
+                    <a href="show-sellers.php?delete_id=<?php echo $sel->id; ?>">DELETE</a>
+                    <a href="edit-sellers.php?edit_id=<?php echo $sel->id; ?>">EDIT</a>
+                </td>
             </tr>
         <?php
         }

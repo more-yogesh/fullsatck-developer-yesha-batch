@@ -13,7 +13,7 @@
         <table border="1">
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="name" id=""></td>
+                <td><input type="text" name="name" id="" value=""></td>
             </tr>
             <tr>
                 <td>Email</td>
@@ -39,7 +39,7 @@
                 <td>
                     <select name="state" id="">
                         <option value="guj">GUJARAT</option>
-                        <option value="maha">MAHARASHTRA</option>
+                        <option value="maha" selected>MAHARASHTRA</option>
                         <option value="panjab">PANJAAAB</option>
                     </select>
                 </td>
@@ -56,7 +56,7 @@
             </tr>
             <tr>
                 <td>Password</td>
-                <td><input type="password" name="password" id=""></td>
+                <td><input type="password" value="" name="password" id=""></td>
             </tr>
             <tr>
                 <td><input type="submit" value="ADD"></td>
