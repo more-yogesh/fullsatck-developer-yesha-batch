@@ -24,6 +24,7 @@ if (isset($_GET['delete_id'])) {
     <table border="1" width="100%">
         <tr>
             <td>#</td>
+            <td>Photo</td>
             <td>name</td>
             <td>email</td>
             <td>gender</td>
@@ -37,6 +38,7 @@ if (isset($_GET['delete_id'])) {
         ?>
             <tr>
                 <td>#</td>
+                <td><img src="uploads/<?php echo $sel->profile_photo; ?>" height="100" /></td>
                 <td><?php echo $sel->name; ?></td>
                 <td><?php echo $sel->email; ?></td>
                 <td>

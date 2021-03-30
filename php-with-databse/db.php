@@ -1,3 +1,3 @@
 <?php
 
-$connection = new mysqli('localhost', 'root', '', 'ecom');
+$connection = new mysqli('localhost', 'root', '', 'sellers');

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="post_handler.php" method="post">
+    <form action="post_handler.php" enctype="multipart/form-data" method="post">
         <table border="1">
             <tr>
                 <td>Name</td>

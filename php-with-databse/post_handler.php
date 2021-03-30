@@ -14,6 +14,17 @@ if (isset($_POST['btnUpdate'])) {
     $connection->query($updateQuery);
     header('location:show-sellers.php');
 } else {
+
+    // echo "<pre>";
+    // print_r($_FILES['profi   le_photo']);exit;
+
+    $uploadPath = "uploads/";
+    $tmpName = $_FILES['profile_photo']['tmp_name'];
+    $destiny =  $uploadPath . $_FILES['profile_photo']['name'];
+    move_uploaded_file($tmpName, $destiny);
+
+    // unlink
+
     $name = $_POST['name'];
     $email = $_POST['email'];
     $gender = $_POST['gender'];
@@ -21,8 +32,9 @@ if (isset($_POST['btnUpdate'])) {
     $state = $_POST['state'];
     $address = $_POST['address'];
     $password =  md5($_POST['password']);
+    $image = $_FILES['profile_photo']['name'];
 
-    $query = "INSERT INTO sellers (name, email, gender, categories, state, address, password) VALUES ('$name', '$email', '$gender', '$categories', '$state', '$address', '$password')";
+    $query = "INSERT INTO sellers (name, email, gender, categories, state, address, password, profile_photo) VALUES ('$name', '$email', '$gender', '$categories', '$state', '$address', '$password', '$image')";
 
     $connection->query($query);
     header('location:seller.php');
