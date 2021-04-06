@@ -22,9 +22,11 @@ session_start();
                 <li><a href="index.php">Home</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <?php
+
                 if (isset($_SESSION['myUserDetails'])) {
+                    $user = $_SESSION['myUserDetails'];
                 ?>
-                    <li><a href="logout.php"><?php echo $_SESSION['myUserDetails']->name;?></a></li>
+                    <li><a href="logout.php"><?php echo $user->name;?></a></li>
                     <?php
                 } else {
                     ?>

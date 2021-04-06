@@ -14,8 +14,22 @@ if (isset($_POST['btnRegister'])) {
 }
 
 if (isset($_POST['btnLogin'])) {
+
+
+
     $email = $_POST['email'];
     $password = md5($_POST['password']);
+    $message = [];
+    if ($email == '') {
+        $message['email'] = "Please Enter Email";
+    }
+    if ($_POST['password'] == '') {
+        $message['password'] = "Please Enter Password";
+    }
+
+    if (sizeof($message) > 0) {
+        header('location:login.php?errorMessages=' . json_encode($message));
+    }
 
     $loginQuery = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
 
@@ -25,4 +39,6 @@ if (isset($_POST['btnLogin'])) {
         $_SESSION['myUserDetails'] = $data->fetch_object();
         header('location:dashboard.php');
     }
+
+    header('location:login.php?loginError=Email or password is wrong');
 }
